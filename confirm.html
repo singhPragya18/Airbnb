@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+         *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins',sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .box{
+            position: relative;
+            width: 300px;
+            height: 420px;
+            background-color: black;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .box form{
+            position: absolute;
+            inset: 4px;
+            padding: 50px 40px;
+            z-index: 2;
+            display: flex;
+            background-color: black;
+            flex-direction: column;
+            border-radius: 8px;
+        }
+        .box form h2{
+            color: white;
+            font-weight: 500;
+            text-align: center;
+            letter-spacing: 0.1em;
+        }
+        .box form .inputbox{
+               position: relative;
+               width: 300px;
+               margin-top: 35px;
+
+        }
+        .box form .inputbox input{
+            position: relative;
+            width: 100%;
+            padding: 20px 10px 10px;
+            background: transparent;
+            outline: none;
+            box-shadow: none;
+            color: rgb(243, 231, 231);
+            font-size: 1em;
+            letter-spacing: 0.05em;
+            transition: 0.5s;
+            z-index: 10;
+        }
+        .box form .inputbox span{
+            position: absolute;
+            left: 0;
+            padding: 20px 10px 10px;
+            pointer-events: none;
+            color: grey;
+            font-size: 1em;
+            letter-spacing: 0.05em;
+            transition: 0.5s;
+        }
+        .box form .inputbox input:valid~span
+        .box form .inputbox input:focus~span
+        {
+            color: white;
+            font-size: 8.75em;
+            transfomr: transition(-34px);
+        }
+        .box form .inputbox i{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: white;
+            border-radius: 4px;
+            overflow: hidden;
+            transition: 0.5s;
+            pointer-events: none;
+        }
+        .box form .inputbox input:valid~i
+        .box form .inputbox input:focus~i
+        {
+              height:44px;
+        }
+      .box form .links{
+          display: flex;
+          justify-content: space-between;
+        }
+        .box::before{
+            content: " ";
+            position: absolute;
+            width: 300px;
+            height: 420px;
+            top: -50%;
+            left: -50%;
+            background: linear-gradient(0deg,transparent,transparent,aqua,aqua,aqua);
+            z-index: 1;
+            animation: animate 6s linear infinite;
+            transform-origin: bottom right;
+        }
+        .box::after{
+            content: " ";
+            position: absolute;
+            width: 300px;
+            height: 420px;
+            top: -50%;
+            left: -50%;
+            background: linear-gradient(0deg,transparent,transparent,aqua,aqua,aqua);
+            z-index: 1;
+            animation: animate 6s linear infinite;
+            transform-origin: bottom right;
+            align-delay: -3s;
+        }
+        @keyframes animate
+        {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .box form .links a{
+            margin: 10px 0;
+            font-size: 0.75em;
+            color: grey;
+            text-decoration: none;
+        }
+        .box form .links a:hover
+        .box form .links a:nth child(2)
+        {
+            color: white;
+        }
+        .box form input[type="submit"]
+         {
+             border: none;
+             outline: none;
+             padding: 9px 25px;
+             background: white;
+             cursor: pointer;
+             font-size: 0.9em;
+             border-radius: 4px;
+             font-weight: 600;
+             width: 100px;
+             margin-top: 10px;
+         } 
+         .borderline{
+             position: absolute;
+             top: 0;
+             inset: 0;
+         }
+         .borderline::before{
+             position: absolute;
+             top: -50%;
+             left: -50%;
+             content: " ";
+            width: 300px;
+            height: 420px;
+            top: -50%;
+            left: -50%;
+            background: linear-gradient(0deg,transparent,transparent,red,red,red);
+            z-index: 1;
+            animation: animate 6s linear infinite;
+            transform-origin: bottom right;
+            animation-delay: -1.5s;
+         }
+         .borderline::after{
+             position: absolute;
+             top: -50%;
+             left: -50%;
+             content: " ";
+            width: 300px;
+            height: 420px;
+            top: -50%;
+            left: -50%;
+            background: linear-gradient(0deg,transparent,transparent,red,red,red);
+            z-index: 1;
+            animation: animate 6s linear infinite;
+            transform-origin: bottom right;
+            animation-delay: -4.5s;
+         .box form input[type="submit"]:active
+         {
+             opacity: 0.8;
+         }   
+    </style>
+</head>
+<body>
+   
+<div class="last">
+ <div style="margin-top: 0px;">
+    <center><h1 style="margin-top: 0px"><u>Make your Payment</u></h1></center>
+<h1> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Confirm and Pay:-</h1>
+<div style="margin-left: 100px;width: 400px;height: 100px;box-shadow: 10px 10px 10px grey;">
+<h2>This a rare find <i class="fa fa-diamond"></i></h2>
+<h4>Lonavla is usually booked.</h4>
+<h1 style="margin-left: 100px;margin-top: 60px;margin-bottom: 10px;">Log in or Sign up-</h1>
+<div class="box">
+    <span class="borderline"></span>
+    <form method="get" action="index.html">
+      <h2>Sign in</h2>  
+      <div class="inputbox">
+          <input type="text" required>
+          <span></span>
+          <i></i>
+      </div>
+      <div class="inputbox">
+        <input type="password" required>
+        <span></span>
+        <i></i>
+    </div>
+    <div class="links">
+        <a href=#>Forgot Password</a>
+        <a href=#>Sign up</a>
+    </div>
+    <input type="submit" value="login">
+    </form>
+</div>
+<a href="#"><i class="fa fa-facebook" style="margin-left: 100px;margin-top: 20px;font-size: xx-large;color: black;"></i> <i style="margin-left: 100px;margin-top: 20px;font-size: xx-large;color: black;" class="fa fa-google"></i> <i style="margin-left: 100px;margin-top: 20px;color: black;font-size: xx-large;" class="fa fa-apple"></i></a><br>
+
+</div>
+<div>
+    <i style="margin-left: 900px;margin-bottom: 5px;" class="fa fa-star"><u>5.00</u></i>A cosy peaceful cabin at your holiday location.<br>
+    <img style="margin-left: 900px;width: 500px" src="https://a0.muscache.com/im/pictures/miso/Hosting-888269360780625633/original/d5e319dc-272e-4bb1-b855-50dabf280379.jpeg?im_w=1200">
+</div>
+</div>
+</div>
+</body>
+</html>
